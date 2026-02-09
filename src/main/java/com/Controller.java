@@ -1,11 +1,12 @@
 package com;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 
 @RestController
-//@CrossOrigin()
+@CrossOrigin(origins = "https://flood-relief-frontend-nine.vercel.app/")
 public class Controller {
 
     // inject service class
