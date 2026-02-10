@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 
 @RestController
-@CrossOrigin(origins = "https://flood-relief-frontend-nine.vercel.app/")
+@CrossOrigin(origins = "https://flood-relief-frontend-nine.vercel.app")
 public class Controller {
 
     // inject service class
