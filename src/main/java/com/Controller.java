@@ -19,11 +19,13 @@ public class Controller {
 
     @PostMapping("/makenewuser")
     public Boolean makeNewUser(@RequestBody NewUserRequest request) {
+        System.out.println("Controller hit: POST /makenewuser");
         return this.service.addUser(request.username(), request.password());
     }    
 
     @PostMapping("/validatelogin")
     public Boolean validatelogin(@RequestBody NewUserRequest request) {
+        System.out.println("Controller hit: POST /validatelogin");
         return this.service.getUser(request.username(), request.password());
     }  
 }
