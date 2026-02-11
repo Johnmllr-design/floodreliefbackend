@@ -1,6 +1,7 @@
 package com;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
@@ -15,6 +16,11 @@ public class Controller {
 
     public Controller(UserService injectableService){
         this.service = injectableService;
+    }
+
+    @GetMapping("/")
+    public String home() {
+        return "Flood Payout API is running. Endpoints: POST /makenewuser, POST /validatelogin";
     }
 
     @PostMapping("/makenewuser")

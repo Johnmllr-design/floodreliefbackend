@@ -1,8 +1,6 @@
 package com;
 
-import org.springframework.stereotype.Repository;
-import org.springframework.data.mongodb.repository.*;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-@Repository
-public interface UserRepo extends MongoRepository<User, String> {
+public interface UserRepo extends JpaRepository<User, String> {
 }
