@@ -1,4 +1,4 @@
-package com;
+package com.example.demo;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
