@@ -1,13 +1,13 @@
 package com.example.demo;
-import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.annotation.Id;
 
+import jakarta.persistence.*;
 
-@Document
+@Entity
+@Table(name = "users")
 public class User {
     @Id
-    String username;
-    String password;
+    private String username;
+    private String password;
 
     public User(){
     }

@@ -1,5 +1,6 @@
 package com.example.demo;
-import org.springframework.data.mongodb.repository.*;
 
-public interface UserRepo extends MongoRepository<User, String> {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface UserRepo extends JpaRepository<User, String> {
 }
