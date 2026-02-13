@@ -8,7 +8,7 @@ import jakarta.validation.Valid;
 
 
 @RestController
-@CrossOrigin(origins = {"https://www.flood-relief-frontend-nine.vercel.app"})
+@CrossOrigin(origins = "*")
 public class Controller {
 
     // inject service class
