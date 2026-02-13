@@ -8,7 +8,7 @@ import jakarta.validation.Valid;
 
 
 @RestController
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "https://flood-relief-frontend-nine.vercel.app")
 public class Controller {
 
     // inject service class
@@ -27,14 +27,12 @@ public class Controller {
     @PostMapping("/makenewuser")
     public Boolean makeNewUser(@Valid @RequestBody NewUserRequest request) {
         System.out.println("Controller hit: POST /makenewuser");
-        return true;
-        //return this.service.addUser(request.username(), request.password());
+        return this.service.addUser(request.username(), request.password());
     }    
 
     @PostMapping("/validatelogin")
     public Boolean validatelogin(@Valid @RequestBody NewUserRequest request) {
         System.out.println("Controller hit: POST /validatelogin");
-        return true;
-        //return this.service.getUser(request.username(), request.password());
+        return this.service.getUser(request.username(), request.password());
     }  
 }
