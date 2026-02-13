@@ -35,8 +35,10 @@ public class UserService {
 
         if (possibleUser.isPresent()) {
             User user = possibleUser.get(); // get user object
-            return this.encoder.matches(password, user.getPassword());
-        }else{
+            String storedPassword = user.getPassword();
+            if (storedPassword == null || storedPassword.isBlank()) return false;
+            return this.encoder.matches(password, storedPassword);
+        } else {
             return false; // user doesn't exist
         }
     }
